@@ -25,7 +25,7 @@
                         <a class="nav-link fw-semibold" href="#">About Us</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#">Contact</a>
+                        <a class="nav-link fw-semibold" href="contact.html">Contact</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -149,7 +149,7 @@
               <img src="images/photo-1621929209157-b69c5183d01e.avif" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Trivandrum</h5>
-                <p class="card-text text-center"> <h6 class="text-center">Available</h6> 7:00pm <br> 8:00pm</p>
+                <p class="card-text text-center text-success"> <h6 class="text-center">Available</h6> 7:00pm <br> 8:00pm</p>
                 <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                 <button type="button" class="btn btn-success align-self-center">Book Now</button>
               </div>
@@ -178,17 +178,17 @@
         <h1 class="text-center">CONTACT US</h1>
         <div class="row">
             <div class="col-12 col-lg-6">
-                <form class="row g-3 needs-validation" novalidate>
+                <form id="gform" class="row g-3 needs-validation" method="post"  action="https://script.google.com/macros/s/AKfycbxXgXK-llDaGbnXq9sI4Z03zkUc3p95_HeJ2kobUZOZ-FOrXYZlxcPMm9PrHFUeaE-2/exec">
                     <div class="col-md-4">
                       <label for="validationCustom01" class="form-label">First name</label>
-                      <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                      <input type="text" id="fname" name="firstname" class="form-control" id="validationCustom01" value="Mark" required>
                       <div class="valid-feedback">
                         Looks good!
                       </div>
                     </div>
                     <div class="col-md-4">
-                      <label for="validationCustom02" class="form-label">Last name</label>
-                      <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                      <label for="validationCustom02" class="form-label">Email</label>
+                      <input type="email" id="lname" name="email" class="form-control" id="validationCustom02" value="Otto" required>
                       <div class="valid-feedback">
                         Looks good!
                       </div>
@@ -197,7 +197,7 @@
                       <label for="validationCustomUsername" class="form-label">Username</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <input type="text" class="form-control" name="username" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                         <div class="invalid-feedback">
                           Please choose a username.
                         </div>
@@ -205,26 +205,26 @@
                     </div>
                     <div class="col-md-6">
                       <label for="validationCustom03" class="form-label">City</label>
-                      <input type="text" class="form-control" id="validationCustom03" required>
+                      <input type="text" name="city" class="form-control" id="validationCustom03" required>
                       <div class="invalid-feedback">
                         Please provide a valid city.
                       </div>
                     </div>
                     <div class="col-md-3">
                       <label for="validationCustom04" class="form-label">Turf</label>
-                      <select class="form-select" id="validationCustom04" required>
+                      <select class="form-select" name="turf" id="validationCustom04" required>
                         <option selected disabled value="">Choose...</option>
                         <option>Calicut</option>
                         <option>Kochi</option>
                         <option>Ernakulam</option>
                       </select>
                       <div class="invalid-feedback">
-                        Please select a valid state.
+                        Please select a valid Turf.
                       </div>
                     </div>
                     <div class="col-md-3">
                       <label for="validationCustom05" class="form-label">Pin</label>
-                      <input type="text" class="form-control" id="validationCustom05" required>
+                      <input type="number" name="pin" class="form-control" id="validationCustom05" required>
                       <div class="invalid-feedback">
                         Please provide a valid zip.
                       </div>
@@ -287,7 +287,7 @@
         <p class="">We are a one-stop platform to help sports enthusiasts meet playpals, discover venues, skill-up their game, manage their activities seamlessly and buy gear.</p>
             </div>
             <div class="col-12 col-lg-6">
-                <h2>OUR STORY</h2>
+                <h5>OUR STORY</h5>
                 <p class="float-start bg-light">This fairytale, like all fairytales, started with a few dudes in distress. One was lamenting his dear departed tennis partner, the second grieving for the badminton racquet left behind, the third desolate after another football weekend that never happened, the fourth broke and gymless from another membership waylaid, and the fifth just #bored to death. Alas, unlike in other fairytales, no fair damsel came to their rescue and they wallowed for a while in their sorrow. And so they finally did what all forsaken souls do...start building their very own Neverland, a place for all restless adrenaline junkies like themselves...and thus a thought, nay a belief called MYTURF was sown.</p>
             </div>
         </div>
