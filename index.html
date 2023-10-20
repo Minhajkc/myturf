@@ -181,57 +181,44 @@
                 <form id="gform" class="row g-3 needs-validation" method="post"  action="https://script.google.com/macros/s/AKfycbxXgXK-llDaGbnXq9sI4Z03zkUc3p95_HeJ2kobUZOZ-FOrXYZlxcPMm9PrHFUeaE-2/exec">
                     <div class="col-md-4">
                       <label for="validationCustom01" class="form-label">First name</label>
-                      <input type="text" id="fname" name="firstname" class="form-control" id="validationCustom01" value="Mark" required>
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
+                      <input type="text" id="fname" name="firstname" class="form-control" id="validationCustom01">
+                      <p id="forfname"class="text-danger"></p>
                     </div>
                     <div class="col-md-4">
                       <label for="validationCustom02" class="form-label">Email</label>
-                      <input type="email" id="lname" name="email" class="form-control" id="validationCustom02" value="Otto" required>
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
+                      <input type="email" id="emaill" name="email" class="form-control" id="validationCustom02">
+                      <p id="foremail" class="text-danger"></p>
                     </div>
                     <div class="col-md-4">
                       <label for="validationCustomUsername" class="form-label">Username</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" class="form-control" name="username" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">
-                          Please choose a username.
-                        </div>
+                        <input type="text" class="form-control" name="username" id="usernamee" aria-describedby="inputGroupPrepend">
                       </div>
+                      <p id="forusername" class="text-danger"></p>
                     </div>
                     <div class="col-md-6">
                       <label for="validationCustom03" class="form-label">City</label>
-                      <input type="text" name="city" class="form-control" id="validationCustom03" required>
-                      <div class="invalid-feedback">
-                        Please provide a valid city.
-                      </div>
+                      <input type="text" name="city" class="form-control" id="city">
+                      <p id="forcity" class="text-danger"></p>
                     </div>
                     <div class="col-md-3">
                       <label for="validationCustom04" class="form-label">Turf</label>
-                      <select class="form-select" name="turf" id="validationCustom04" required>
+                      <select class="form-select" name="turf" id="turf" required>
                         <option selected disabled value="">Choose...</option>
                         <option>Calicut</option>
                         <option>Kochi</option>
-                        <option>Ernakulam</option>
+                        <option>Trivandrum</option>
                       </select>
-                      <div class="invalid-feedback">
-                        Please select a valid Turf.
-                      </div>
                     </div>
                     <div class="col-md-3">
                       <label for="validationCustom05" class="form-label">Pin</label>
-                      <input type="number" name="pin" class="form-control" id="validationCustom05" required>
-                      <div class="invalid-feedback">
-                        Please provide a valid zip.
-                      </div>
+                      <input type="number" name="pin" class="form-control" id="pinu" required>
+                      <p id="forpin" class="text-danger"></p>
                     </div>
                     <div class="col-12">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <input class="form-check-input" type="checkbox" value="" id="checkboc" required>
                         <label class="form-check-label" for="invalidCheck">
                           Agree to terms and conditions
                         </label>
@@ -241,7 +228,7 @@
                       </div>
                     </div>
                     <div class="col-12 text-center">
-                      <button class="btn btn-success " type="submit">Submit form</button>
+                      <button class="btn btn-success " type="submit" onclick="sub()">Submit form</button>
                             <!-- Button trigger modal -->
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                        Quit
@@ -319,7 +306,53 @@
 </footer>
 
 
+<script>
+ 
+  function sub(){
+    const unm = document.getElementById("fname").value;
+  const namee = document.getElementById("forfname");
+  var em = document.getElementById("emaill").value;
+  const ema = document .getElementById("foremail");
+  const un = document.getElementById("usernamee").value;
+  const nme = document.getElementById("forusername");
+  const ct = document.getElementById("city").value;
+  const cty=document.getElementById("forcity");
+  const pn = document.getElementById("pinu").value;
+  const pinn = document.getElementById("forpin");
+ 
+    if(unm.trim()===""){
+      namee.innerHTML="Enter a valid name*";
+    }
+    else{
+      namee.innerHTML="";
+    }
+    if(em===""){
+      ema.innerHTML="Enter a valid Email*";
+    }
+    else{
+      ema.innerHTML="";
+    }
+    if(un===""){
+      nme.innerHTML="Enter a user name*";
+    }
+    else{
+      nme.innerHTML="";
+    }
+    if(ct===""){
+      cty.innerHTML="Enter Your City*";
+    }
+    else{
+      cty.innerHTML="";
+    }
+    if(pn===""){
+      pinn.innerText="Enter Your Pin*";
+    }
+    else{
+      pinn.innerHTML="";
+    }
+  }
 
+</script>
 
     
 
